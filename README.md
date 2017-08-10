@@ -1,0 +1,2 @@
+# koacase
+koa-generator
