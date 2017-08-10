@@ -1,0 +1,22 @@
+{
+  "name": "koacase",
+  "version": "1.0.0",
+  "description": "koa generator tool",
+  "main": "bin/koacase",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmeo/koacase.git"
+  },
+  "keywords": [
+    "koa"
+  ],
+  "author": "jmeo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jmeo/koacase/issues"
+  },
+  "homepage": "https://github.com/jmeo/koacase#readme"
+}
