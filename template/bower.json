@@ -1,0 +1,26 @@
+{
+  "name": "tdashboard",
+  "description": "tima web 集成环境",
+  "main": "index.js",
+  "authors": [
+    "jmeo"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "dashboard"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "bootstrap-paginator": "^1.0.2"
+  }
+}

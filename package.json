@@ -4,6 +4,7 @@
   "description": "koa generator tool",
   "main": "bin/koacase",
   "scripts": {
+    "start":"node ./bin/koacase",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

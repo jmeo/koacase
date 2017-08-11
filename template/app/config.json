@@ -1,0 +1,10 @@
+{
+    "appkey": "6583182443",
+    "secretkey": "60cd102f6e19ae654359ac4834c36473",
+    "serverPort" : "{{serverPort}}",
+    "redis":{
+        "host":"localhost",
+        "port":6379,
+        "db" : 6
+    }
+}
