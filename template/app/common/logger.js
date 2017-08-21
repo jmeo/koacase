@@ -1,6 +1,6 @@
 'use strict';
 const config = require('../config'),Log = require('log');
-const logger;
+const logger = console;
 
 if(config.log4j){
 

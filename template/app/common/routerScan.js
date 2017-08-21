@@ -9,7 +9,7 @@ var findFile = require("./findFile"),
  * @returns {*}
  */
 function routerScan(app){
-    var files = findFile(path.join(__dirname,'../../controller'),'router.js');
+    var files = findFile(path.join(__dirname,'../controller'),'router.js');
     for(var k in files){
         app.use(require(files[k]).routes());
     }
