@@ -33,7 +33,7 @@
   "files": [
     "LICENSE",
     "bin/",
-    "templates/"
+    "template/"
   ],
   "bin": {
     "koacase": "./bin/koacase"

@@ -124,30 +124,30 @@ function createApplication(app_name, path) {
 
     mkdir(path+"/app",function(){
         //common
-        mkdir(path + '/common', function(){
-          write(path + '/common/cRouter.js', cRouter);
-          write(path + '/common/findFile.js', findFile);
-          write(path + '/common/jutil.js', jutil);
-          write(path + '/common/logger.js', logger);
-          write(path + '/common/request.js', request);
-          write(path + '/common/routerScan.js', routerScan);
-          write(path + '/common/signature.js', signature);
-          write(path + '/common/signurl.js', signurl);
+        mkdir(path + '/app/common', function(){
+          write(path + '/app/common/cRouter.js', cRouter);
+          write(path + '/app/common/findFile.js', findFile);
+          write(path + '/app/common/jutil.js', jutil);
+          write(path + '/app/common/logger.js', logger);
+          write(path + '/app/common/request.js', request);
+          write(path + '/app/common/routerScan.js', routerScan);
+          write(path + '/app/common/signature.js', signature);
+          write(path + '/app/common/signurl.js', signurl);
           complete();
         });
         //controller
-        mkdir(path+'/controller',function(){
-        write(path+"/controller/router.js",router);
+        mkdir(path+'/app/controller',function(){
+        write(path+"/app/controller/router.js",router);
         });
         //views
-        mkdir(path + '/views', function(){
-        write(path + '/views/test.pug', view_test);
+        mkdir(path + '/app/views', function(){
+        write(path + '/app/views/test.pug', view_test);
         complete();
         });
-        write(path + "/config.js",config);
-        write(path + "/config.jscon",config_json);
-        write(path + "/errorCode.js",errorCode);
-        write(path + "/index.js",index);
+        write(path + "/app/config.js",config);
+        write(path + "/app/config.json",config_json);
+        write(path + "/app/errorCode.js",errorCode);
+        write(path + "/app/index.js",index);
         complete();
     });
     
@@ -188,19 +188,19 @@ function createApplication(app_name, path) {
     // write files
     write(path + '/package.json', JSON.stringify(pkg, null, 2));
     write(path + '/server.js', server);
-    write(path+"/bower.json",bower);
-    write(path+"/Gruntfile.js",grunt);
+    write(path + "/bower.json",bower);
+    write(path + "/Gruntfile.js",grunt);
 
-    if (program.git) {
-      write(path + '/.gitignore', fs.readFileSync(__dirname + '/../templates/js/gitignore', 'utf-8'));
-    }
+    // if (program.git) {
+    //   write(path + '/.gitignore', fs.readFileSync(__dirname + '/../template/js/gitignore', 'utf-8'));
+    // }
 
     complete();
   });
 }
 
 function copy_template(from, to) {
-  from = path.join(__dirname, '..', 'templates', from);
+  from = path.join(__dirname, '..', 'template', from);
   write(to, fs.readFileSync(from, 'utf-8'));
 }
 
@@ -258,7 +258,7 @@ function launchedFromCmd() {
  */
 
 function loadTemplate(name) {
-  return fs.readFileSync(path.join(__dirname, '..', 'templates', name), 'utf-8');
+  return fs.readFileSync(path.join(__dirname, '..', 'template', name), 'utf-8');
 }
 
 /**
