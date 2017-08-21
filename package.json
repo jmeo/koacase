@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/jmeo/koacase/issues"
   },
-  "homepage": "https://github.com/jmeo/koacase#readme"
+  "homepage": "https://github.com/jmeo/koacase#readme",
+  "dependencies": {
+    "crypto": "0.0.3",
+    "gulp-rename": "^1.2.2",
+    "lodash": "^4.17.4",
+    "yeoman-generator": "^1.1.0"
+  }
 }
