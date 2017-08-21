@@ -81,11 +81,6 @@ module.exports = function (grunt) {
                 cwd : buildDir,
                 src : buildDir+'/**',
                 dest : 'repository/file.zip'
-            },
-            ftbdashboard:{
-                cwd : buildDir,
-                src : buildDir+'/**',
-                dest : 'repository/ftbdashboard.zip'
             }
         }
     });
@@ -93,7 +88,4 @@ module.exports = function (grunt) {
     //TODO 注册服务 default
     grunt.registerTask('default',['copy:main','babel:dist','uglify:target']);
     grunt.registerTask('package',['clean','copy','auto_install','babel','uglify','zip:build']);
-    grunt.registerTask('package_unuglify',['clean','copy','auto_install','zip:build']);
-    grunt.registerTask('package_ftbdashboard',['clean','copy','auto_install','uglify','zip:ftbdashboard']);
-
 };
