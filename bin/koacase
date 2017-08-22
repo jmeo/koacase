@@ -105,8 +105,8 @@ function createApplication(app_name, path) {
   var logger = loadTemplate('app/common/logger.js');
   var request = loadTemplate('app/common/request.js');
   var routerScan = loadTemplate('app/common/routerScan.js');
-  var signature = loadTemplate('app/common/signature.js');
-  var signurl = loadTemplate('app/common/signurl.js');
+  // var signature = loadTemplate('app/common/signature.js');
+  // var signurl = loadTemplate('app/common/signurl.js');
 
   //json
   var config_json = loadTemplate('app/config.json');
@@ -131,8 +131,8 @@ function createApplication(app_name, path) {
           write(path + '/app/common/logger.js', logger);
           write(path + '/app/common/request.js', request);
           write(path + '/app/common/routerScan.js', routerScan);
-          write(path + '/app/common/signature.js', signature);
-          write(path + '/app/common/signurl.js', signurl);
+          // write(path + '/app/common/signature.js', signature);
+          // write(path + '/app/common/signurl.js', signurl);
           complete();
         });
         //controller
