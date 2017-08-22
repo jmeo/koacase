@@ -31,7 +31,7 @@ module.exports = function (grunt) {
                 files:[{
                     expand : true,
                     cwd : '.',
-                    src : ['**','!bower_components/**','bower_components/jquery/dist/jquery.min.js','bower_components/bootstrap-paginator/build/bootstrap-paginator.min.js','bower_components/bootstrap/dist/**','!node_modules/**','!repository/**'],
+                    src : ['**'],
                     dest : buildDir
                 }]
             }
@@ -43,7 +43,7 @@ module.exports = function (grunt) {
                     stderr : true,
                     stdout : true,
                     npm : '--production -d',
-                    bower : false,
+                    bower : true,
                     failOnError : false
                 }
             }

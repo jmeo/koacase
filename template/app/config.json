@@ -1,6 +1,6 @@
 {
-    "appkey": "6583182443",
-    "secretkey": "60cd102f6e19ae654359ac4834c36473",
+    "appkey": "",
+    "secretkey": "",
     "serverPort" : "{{serverPort}}",
     "redis":{
         "host":"localhost",
