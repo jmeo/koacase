@@ -104,9 +104,7 @@ function createApplication(app_name, path) {
   var jutil = loadTemplate('app/common/jutil.js');
   var logger = loadTemplate('app/common/logger.js');
   var request = loadTemplate('app/common/request.js');
-  var routerScan = loadTemplate('app/common/routerScan.js');
-  // var signature = loadTemplate('app/common/signature.js');
-  // var signurl = loadTemplate('app/common/signurl.js');
+  var routerScan = loadTemplate('app/common/routerScan.js')
 
   //json
   var config_json = loadTemplate('app/config.json');
@@ -131,8 +129,6 @@ function createApplication(app_name, path) {
           write(path + '/app/common/logger.js', logger);
           write(path + '/app/common/request.js', request);
           write(path + '/app/common/routerScan.js', routerScan);
-          // write(path + '/app/common/signature.js', signature);
-          // write(path + '/app/common/signurl.js', signurl);
           complete();
         });
         //controller
@@ -203,10 +199,6 @@ function createApplication(app_name, path) {
     write(path + "/bower.json",bower);
     write(path + "/Gruntfile.js",grunt);
 
-    // if (program.git) {
-    //   write(path + '/.gitignore', fs.readFileSync(__dirname + '/../template/js/gitignore', 'utf-8'));
-    // }
-
     complete();
   });
 }
@@ -236,8 +228,6 @@ function emptyDirectory(path, fn) {
 
 function exit(code) {
   // flush output for Node.js Windows pipe bug
-  // https://github.com/joyent/node/issues/6247 is just one bug example
-  // https://github.com/visionmedia/mocha/issues/333 has a good discussion
   function done() {
     if (!(draining--)) _exit(code);
   }
